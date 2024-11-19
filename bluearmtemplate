@@ -23,7 +23,7 @@
         },
         "kabowdType": {
             "type": "string",
-            "defaultValue": "Standard_LRS",
+            "defaultValue": "Standard_ZRS",
             "allowedValues": [
                 "Standard_LRS",
                 "Standard_ZRS",
