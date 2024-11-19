@@ -15,14 +15,15 @@
         },
         "releasevmUbuntuOSVersion": {
             "type": "string",
-            "defaultValue": "latest",
+            "defaultValue": "19.10.202007100",
             "allowedValues": [
                 "12.04.5-LTS",
                 "14.04.2-LTS",
                 "15.04"
+				"19.10.202007100"
             ]
         },
-        "releasestorageType": {
+        "seleasestorageType": {
             "type": "string",
             "defaultValue": "Standard_LRS",
             "allowedValues": [
@@ -36,43 +37,12 @@
     },
     "resources": [
         {
-            "name": "releasedev",
-            "type": "Microsoft.Network/virtualNetworks",
-            "location": "[resourceGroup().location]",
-            "apiVersion": "2015-06-15",
-            "dependsOn": [],
-            "tags": {
-                "displayName": "releasedev"
-            },
-            "properties": {
-                "addressSpace": {
-                    "addressPrefixes": [
-                        "[variables('releasedevPrefix')]"
-                    ]
-                },
-                "subnets": [
-                    {
-                        "name": "[variables('releasedevSubnet1Name')]",
-                        "properties": {
-                            "addressPrefix": "[variables('releasedevSubnet1Prefix')]"
-                        }
-                    },
-                    {
-                        "name": "[variables('releasedevSubnet2Name')]",
-                        "properties": {
-                            "addressPrefix": "[variables('releasedevSubnet2Prefix')]"
-                        }
-                    }
-                ]
-            }
-        },
-        {
             "name": "[variables('releasevmNicName')]",
             "type": "Microsoft.Network/networkInterfaces",
             "location": "[resourceGroup().location]",
             "apiVersion": "2015-06-15",
             "dependsOn": [
-                "[concat('Microsoft.Network/virtualNetworks/', 'releasedev')]"
+                "[concat('Microsoft.Network/virtualNetworks/', 'releasenet')]"
             ],
             "tags": {
                 "displayName": "releasevmNic"
@@ -97,7 +67,7 @@
             "location": "[resourceGroup().location]",
             "apiVersion": "2015-06-15",
             "dependsOn": [
-                "[concat('Microsoft.Storage/storageAccounts/', variables('releasestorageName'))]",
+                "[concat('Microsoft.Storage/storageAccounts/', variables('seleasestorageName'))]",
                 "[concat('Microsoft.Network/networkInterfaces/', variables('releasevmNicName'))]"
             ],
             "tags": {
@@ -122,7 +92,7 @@
                     "osDisk": {
                         "name": "releasevmOSDisk",
                         "vhd": {
-                            "uri": "[concat('http://', variables('releasestorageName'), '.blob.core.windows.net/', variables('releasevmStorageAccountContainerName'), '/', variables('releasevmOSDiskName'), '.vhd')]"
+                            "uri": "[concat('http://', variables('seleasestorageName'), '.blob.core.windows.net/', variables('releasevmStorageAccountContainerName'), '/', variables('releasevmOSDiskName'), '.vhd')]"
                         },
                         "caching": "ReadWrite",
                         "createOption": "FromImage"
@@ -138,33 +108,65 @@
             }
         },
         {
-            "name": "[variables('releasestorageName')]",
+            "name": "[variables('seleasestorageName')]",
             "type": "Microsoft.Storage/storageAccounts",
             "location": "[resourceGroup().location]",
             "apiVersion": "2015-06-15",
             "dependsOn": [],
             "tags": {
-                "displayName": "releasestorage"
+                "displayName": "seleasestorage"
             },
             "properties": {
-                "accountType": "[parameters('releasestorageType')]"
+                "accountType": "[parameters('seleasestorageType')]"
+            }
+        },
+        {
+            "name": "releasenet",
+            "type": "Microsoft.Network/virtualNetworks",
+            "location": "[resourceGroup().location]",
+            "apiVersion": "2015-06-15",
+            "dependsOn": [],
+            "tags": {
+                "displayName": "releasenet"
+            },
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[variables('releasenetPrefix')]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "[variables('releasenetSubnet1Name')]",
+                        "properties": {
+                            "addressPrefix": "[variables('releasenetSubnet1Prefix')]"
+                        }
+                    },
+                    {
+                        "name": "[variables('releasenetSubnet2Name')]",
+                        "properties": {
+                            "addressPrefix": "[variables('releasenetSubnet2Prefix')]"
+                        }
+                    }
+                ]
             }
         }
     ],
     "variables": {
-        "releasedevPrefix": "10.0.0.0/16",
-        "releasedevSubnet1Name": "Subnet-1",
-        "releasedevSubnet1Prefix": "10.0.0.0/24",
-        "releasedevSubnet2Name": "Subnet-2",
-        "releasedevSubnet2Prefix": "10.0.1.0/24",
         "releasevmImagePublisher": "Canonical",
-        "releasevmImageOffer": "ubuntu-24_04-lts",
+        "releasevmImageOffer": "UbuntuServer",
         "releasevmOSDiskName": "releasevmOSDisk",
-        "releasevmVmSku": "server",
-        "releasevmVnetID": "[resourceId('Microsoft.Network/virtualNetworks', 'releasedev')]",
-        "releasevmSubnetRef": "[concat(variables('releasevmVnetID'), '/subnets/', variables('releasedevSubnet1Name'))]",
+        "releasevmVmSize": "Standard_D1",
+		"releasevmVmSku": "19_10-daily-gen2",
+        "releasevmVnetID": "[resourceId('Microsoft.Network/virtualNetworks', 'releasenet')]",
+        "releasevmSubnetRef": "[concat(variables('releasevmVnetID'), '/subnets/', variables('releasenetSubnet1Name'))]",
         "releasevmStorageAccountContainerName": "vhds",
         "releasevmNicName": "[concat(parameters('releasevmName'), 'NetworkInterface')]",
-        "releasestorageName": "[concat('releasestorage', uniqueString(resourceGroup().id))]"
+        "seleasestorageName": "[concat('seleasestorage', uniqueString(resourceGroup().id))]",
+        "releasenetPrefix": "10.0.0.0/16",
+        "releasenetSubnet1Name": "Subnet-1",
+        "releasenetSubnet1Prefix": "10.0.0.0/24",
+        "releasenetSubnet2Name": "Subnet-2",
+        "releasenetSubnet2Prefix": "10.0.1.0/24"
     }
 }
