@@ -23,8 +23,9 @@
         },
         "kabowdType": {
             "type": "string",
-            "defaultValue": "Standard_LRS",
+            "defaultValue": "Standard_L8as_v3",
             "allowedValues": [
+                "Standard_L8as_v3"
                 "Standard_LRS",
                 "Standard_ZRS",
                 "Standard_GRS",
