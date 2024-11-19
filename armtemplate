@@ -15,7 +15,7 @@
         },
         "releasevmUbuntuOSVersion": {
             "type": "string",
-            "defaultValue": "14.04.2-LTS",
+            "defaultValue": "latest",
             "allowedValues": [
                 "12.04.5-LTS",
                 "14.04.2-LTS",
@@ -158,9 +158,9 @@
         "releasedevSubnet2Name": "Subnet-2",
         "releasedevSubnet2Prefix": "10.0.1.0/24",
         "releasevmImagePublisher": "Canonical",
-        "releasevmImageOffer": "UbuntuServer",
+        "releasevmImageOffer": "ubuntu-24_04-lts",
         "releasevmOSDiskName": "releasevmOSDisk",
-        "releasevmVmSize": "Standard_D1",
+        "releasevmVmSku": "server",
         "releasevmVnetID": "[resourceId('Microsoft.Network/virtualNetworks', 'releasedev')]",
         "releasevmSubnetRef": "[concat(variables('releasevmVnetID'), '/subnets/', variables('releasedevSubnet1Name'))]",
         "releasevmStorageAccountContainerName": "vhds",
