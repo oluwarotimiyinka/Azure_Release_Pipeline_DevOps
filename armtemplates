@@ -155,6 +155,7 @@
         "releasevmImageOffer": "0001-com-ubuntu-server-jammy-daily",
         "releasevmOSDiskName": "releasevmOSDisk",
         "releasevmImageSku": "22_04-daily-lts-arm64",
+        "releasevmImageVersion": "22.04.202407310",
         "releasevmVnetID": "[resourceId('Microsoft.Network/virtualNetworks', 'releasenet')]",
         "releasevmSubnetRef": "[concat(variables('releasevmVnetID'), '/subnets/', variables('releasenetSubnet1Name'))]",
         "releasevmStorageAccountContainerName": "vhds",
