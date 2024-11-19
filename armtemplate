@@ -159,7 +159,7 @@
         "releasevmSubnetRef": "[concat(variables('releasevmVnetID'), '/subnets/', variables('releasenetSubnet1Name'))]",
         "releasevmStorageAccountContainerName": "vhds",
         "releasevmNicName": "[concat(parameters('releasevmName'), 'NetworkInterface')]",
-        "releasestorageName": "[concat('seleasestorage', uniqueString(resourceGroup().id))]",
+        "releasestorageName": "[concat('releasestorage', uniqueString(resourceGroup().id))]",
         "releasenetPrefix": "10.0.0.0/16",
         "releasenetSubnet1Name": "Subnet-1",
         "releasenetSubnet1Prefix": "10.0.0.0/24",
