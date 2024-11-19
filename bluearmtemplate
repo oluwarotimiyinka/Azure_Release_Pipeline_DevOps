@@ -15,9 +15,9 @@
         },
         "bluetimmUbuntuOSVersion": {
             "type": "string",
-            "defaultValue": "22_04-daily-lts-arm64",
+            "defaultValue": "19_10-daily-gen2",
             "allowedValues": [
-                "22_04-daily-lts-arm64"
+                "19_10-daily-gen2"
             
             ]
         },
@@ -152,7 +152,7 @@
     ],
     "variables": {
         "bluetimmImagePublisher": "Canonical",
-        "bluetimmImageOffer": "0001-com-ubuntu-server-jammy-daily",
+        "bluetimmImageOffer": "UbuntuServer",
         "bluetimmOSDiskName": "bluetimmOSDisk",
         "bluetimmVmSize": "Standard_B2s",
         "bluetimmVnetID": "[resourceId('Microsoft.Network/virtualNetworks', 'bluenet')]",
