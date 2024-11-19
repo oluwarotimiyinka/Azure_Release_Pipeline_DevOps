@@ -20,7 +20,7 @@
                "19.10.202007100"
             ]
         },
-        "seleasestorageType": {
+        "releasestorageType": {
             "type": "string",
             "defaultValue": "Standard_LRS",
             "allowedValues": [
