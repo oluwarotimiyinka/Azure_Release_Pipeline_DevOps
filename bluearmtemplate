@@ -154,7 +154,7 @@
         "bluetimmImagePublisher": "Canonical",
         "bluetimmImageOffer": "0001-com-ubuntu-server-jammy-daily",
         "bluetimmOSDiskName": "bluetimmOSDisk",
-        "bluetimmVmSize": "Standard_LRS",
+        "bluetimmVmSize": "Standard_L8as_v3",
         "bluetimmVnetID": "[resourceId('Microsoft.Network/virtualNetworks', 'bluenet')]",
         "bluetimmSubnetRef": "[concat(variables('bluetimmVnetID'), '/subnets/', variables('bluenetSubnet1Name'))]",
         "bluetimmStorageAccountContainerName": "vhds",
