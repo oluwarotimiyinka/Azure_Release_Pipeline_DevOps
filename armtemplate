@@ -1,0 +1,170 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "releasevmName": {
+            "type": "string",
+            "minLength": 1
+        },
+        "releasevmAdminUserName": {
+            "type": "string",
+            "minLength": 1
+        },
+        "releasevmAdminPassword": {
+            "type": "securestring"
+        },
+        "releasevmUbuntuOSVersion": {
+            "type": "string",
+            "defaultValue": "14.04.2-LTS",
+            "allowedValues": [
+                "12.04.5-LTS",
+                "14.04.2-LTS",
+                "15.04"
+            ]
+        },
+        "releasestorageType": {
+            "type": "string",
+            "defaultValue": "Standard_LRS",
+            "allowedValues": [
+                "Standard_LRS",
+                "Standard_ZRS",
+                "Standard_GRS",
+                "Standard_RAGRS",
+                "Premium_LRS"
+            ]
+        }
+    },
+    "resources": [
+        {
+            "name": "releasedev",
+            "type": "Microsoft.Network/virtualNetworks",
+            "location": "[resourceGroup().location]",
+            "apiVersion": "2015-06-15",
+            "dependsOn": [],
+            "tags": {
+                "displayName": "releasedev"
+            },
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[variables('releasedevPrefix')]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "[variables('releasedevSubnet1Name')]",
+                        "properties": {
+                            "addressPrefix": "[variables('releasedevSubnet1Prefix')]"
+                        }
+                    },
+                    {
+                        "name": "[variables('releasedevSubnet2Name')]",
+                        "properties": {
+                            "addressPrefix": "[variables('releasedevSubnet2Prefix')]"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "[variables('releasevmNicName')]",
+            "type": "Microsoft.Network/networkInterfaces",
+            "location": "[resourceGroup().location]",
+            "apiVersion": "2015-06-15",
+            "dependsOn": [
+                "[concat('Microsoft.Network/virtualNetworks/', 'releasedev')]"
+            ],
+            "tags": {
+                "displayName": "releasevmNic"
+            },
+            "properties": {
+                "ipConfigurations": [
+                    {
+                        "name": "ipconfig1",
+                        "properties": {
+                            "privateIPAllocationMethod": "Dynamic",
+                            "subnet": {
+                                "id": "[variables('releasevmSubnetRef')]"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "[parameters('releasevmName')]",
+            "type": "Microsoft.Compute/virtualMachines",
+            "location": "[resourceGroup().location]",
+            "apiVersion": "2015-06-15",
+            "dependsOn": [
+                "[concat('Microsoft.Storage/storageAccounts/', variables('releasestorageName'))]",
+                "[concat('Microsoft.Network/networkInterfaces/', variables('releasevmNicName'))]"
+            ],
+            "tags": {
+                "displayName": "releasevm"
+            },
+            "properties": {
+                "hardwareProfile": {
+                    "vmSize": "[variables('releasevmVmSize')]"
+                },
+                "osProfile": {
+                    "computerName": "[parameters('releasevmName')]",
+                    "adminUsername": "[parameters('releasevmAdminUsername')]",
+                    "adminPassword": "[parameters('releasevmAdminPassword')]"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "[variables('releasevmImagePublisher')]",
+                        "offer": "[variables('releasevmImageOffer')]",
+                        "sku": "[parameters('releasevmUbuntuOSVersion')]",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "name": "releasevmOSDisk",
+                        "vhd": {
+                            "uri": "[concat('http://', variables('releasestorageName'), '.blob.core.windows.net/', variables('releasevmStorageAccountContainerName'), '/', variables('releasevmOSDiskName'), '.vhd')]"
+                        },
+                        "caching": "ReadWrite",
+                        "createOption": "FromImage"
+                    }
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('releasevmNicName'))]"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "[variables('releasestorageName')]",
+            "type": "Microsoft.Storage/storageAccounts",
+            "location": "[resourceGroup().location]",
+            "apiVersion": "2015-06-15",
+            "dependsOn": [],
+            "tags": {
+                "displayName": "releasestorage"
+            },
+            "properties": {
+                "accountType": "[parameters('releasestorageType')]"
+            }
+        }
+    ],
+    "variables": {
+        "releasedevPrefix": "10.0.0.0/16",
+        "releasedevSubnet1Name": "Subnet-1",
+        "releasedevSubnet1Prefix": "10.0.0.0/24",
+        "releasedevSubnet2Name": "Subnet-2",
+        "releasedevSubnet2Prefix": "10.0.1.0/24",
+        "releasevmImagePublisher": "Canonical",
+        "releasevmImageOffer": "UbuntuServer",
+        "releasevmOSDiskName": "releasevmOSDisk",
+        "releasevmVmSize": "Standard_D1",
+        "releasevmVnetID": "[resourceId('Microsoft.Network/virtualNetworks', 'releasedev')]",
+        "releasevmSubnetRef": "[concat(variables('releasevmVnetID'), '/subnets/', variables('releasedevSubnet1Name'))]",
+        "releasevmStorageAccountContainerName": "vhds",
+        "releasevmNicName": "[concat(parameters('releasevmName'), 'NetworkInterface')]",
+        "releasestorageName": "[concat('releasestorage', uniqueString(resourceGroup().id))]"
+    }
+}
