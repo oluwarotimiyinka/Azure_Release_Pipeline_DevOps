@@ -15,12 +15,12 @@
         },
         "releasevmUbuntuOSVersion": {
             "type": "string",
-            "defaultValue": "19.10.202007100",
+            "defaultValue": "latest",
             "allowedValues": [
                 "12.04.5-LTS",
                 "14.04.2-LTS",
-                "15.04"
-				"19.10.202007100"
+                "15.04",
+				"latest"
             ]
         },
         "seleasestorageType": {
@@ -154,9 +154,9 @@
     ],
     "variables": {
         "releasevmImagePublisher": "Canonical",
-        "releasevmImageOffer": "UbuntuServer",
+        "releasevmImageOffer": "0001-com-ubuntu-server-jammy",
         "releasevmOSDiskName": "releasevmOSDisk",
-        "releasevmImageSku": "19_10-daily-gen2",
+        "releasevmImageSku": "22_04-lts-gen2",
         "releasevmVnetID": "[resourceId('Microsoft.Network/virtualNetworks', 'releasenet')]",
         "releasevmSubnetRef": "[concat(variables('releasevmVnetID'), '/subnets/', variables('releasenetSubnet1Name'))]",
         "releasevmStorageAccountContainerName": "vhds",
