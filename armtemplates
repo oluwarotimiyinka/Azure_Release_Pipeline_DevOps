@@ -15,9 +15,9 @@
         },
         "releasevmUbuntuOSVersion": {
             "type": "string",
-            "defaultValue": "22.04.202407310",
+            "defaultValue": "22_04-daily-lts-arm64",
             "allowedValues": [
-               "22.04.202407310"
+               "22_04-daily-lts-arm64"
               
             ]
         },
