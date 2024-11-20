@@ -15,9 +15,9 @@
         },
         "serverUbuntuOSVersion": {
             "type": "string",
-            "defaultValue": "24.04 LTS",
+            "defaultValue": "NV32as_v4",
             "allowedValues": [
-                "24.04 LTS",
+                "NV32as_v4",
                 "14.04.2-LTS",
                 "15.04"
             ]
@@ -155,7 +155,7 @@
         "serverImagePublisher": "Canonical",
         "serverImageOffer": "UbuntuServer",
         "serverOSDiskName": "serverOSDisk",
-        "serverVmSize": "Standard_B1s",
+        "serverVmSize": "Standard_NV32as_v4",
         "serverVnetID": "[resourceId('Microsoft.Network/virtualNetworks', 'netfire')]",
         "serverSubnetRef": "[concat(variables('serverVnetID'), '/subnets/', variables('netfireSubnet1Name'))]",
         "serverStorageAccountContainerName": "vhds",
