@@ -24,7 +24,6 @@
         "kabowdType": {
             "type": "string",
             "defaultValue": "Standard_GRS"
-            ]
         }
     },
     "resources": [
