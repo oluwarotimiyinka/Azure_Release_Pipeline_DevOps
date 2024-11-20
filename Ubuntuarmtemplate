@@ -15,9 +15,9 @@
         },
         "serverUbuntuOSVersion": {
             "type": "string",
-            "defaultValue": "22_04-LTS",
+             "defaultValue": "24.04 LTS",
             "allowedValues": [
-                "22_04-LTS",
+                "24.04 LTS",
                 "14.04.2-LTS",
                 "15.04"
             ]
