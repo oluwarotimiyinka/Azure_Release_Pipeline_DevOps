@@ -15,9 +15,9 @@
         },
         "TitemiUbuntuOSVersion": {
             "type": "string",
-            "defaultValue": "19_10-daily-gen2",
+            "defaultValue": "24.04 LTS",
             "allowedValues": [
-                "19_10-daily-gen2",
+                "24.04 LTS",
                 "14.04.2-LTS",
                 "15.04"
             ]
