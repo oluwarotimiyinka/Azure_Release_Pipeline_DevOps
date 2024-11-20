@@ -2,27 +2,27 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "TitemiName": {
+        "serverName": {
             "type": "string",
             "minLength": 1
         },
-        "TitemiAdminUserName": {
+        "serverAdminUserName": {
             "type": "string",
             "minLength": 1
         },
-        "TitemiAdminPassword": {
+        "serverAdminPassword": {
             "type": "securestring"
         },
-        "TitemiUbuntuOSVersion": {
+        "serverUbuntuOSVersion": {
             "type": "string",
-            "defaultValue": "24.04 LTS",
+            "defaultValue": "22_04-LTS",
             "allowedValues": [
-                "24.04 LTS",
+                "22_04-LTS",
                 "14.04.2-LTS",
                 "15.04"
             ]
         },
-        "MercyType": {
+        "Webserver1Type": {
             "type": "string",
             "defaultValue": "Standard_LRS",
             "allowedValues": [
@@ -36,15 +36,15 @@
     },
     "resources": [
         {
-            "name": "[variables('TitemiNicName')]",
+            "name": "[variables('serverNicName')]",
             "type": "Microsoft.Network/networkInterfaces",
             "location": "[resourceGroup().location]",
             "apiVersion": "2015-06-15",
             "dependsOn": [
-                "[concat('Microsoft.Network/virtualNetworks/', 'Faith')]"
+                "[concat('Microsoft.Network/virtualNetworks/', 'netfire')]"
             ],
             "tags": {
-                "displayName": "TitemiNic"
+                "displayName": "serverNic"
             },
             "properties": {
                 "ipConfigurations": [
@@ -53,7 +53,7 @@
                         "properties": {
                             "privateIPAllocationMethod": "Dynamic",
                             "subnet": {
-                                "id": "[variables('TitemiSubnetRef')]"
+                                "id": "[variables('serverSubnetRef')]"
                             }
                         }
                     }
@@ -61,37 +61,37 @@
             }
         },
         {
-            "name": "[parameters('TitemiName')]",
+            "name": "[parameters('serverName')]",
             "type": "Microsoft.Compute/virtualMachines",
             "location": "[resourceGroup().location]",
             "apiVersion": "2015-06-15",
             "dependsOn": [
-                "[concat('Microsoft.Storage/storageAccounts/', variables('MercyName'))]",
-                "[concat('Microsoft.Network/networkInterfaces/', variables('TitemiNicName'))]"
+                "[concat('Microsoft.Storage/storageAccounts/', variables('Webserver1Name'))]",
+                "[concat('Microsoft.Network/networkInterfaces/', variables('serverNicName'))]"
             ],
             "tags": {
-                "displayName": "Titemi"
+                "displayName": "server"
             },
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "[variables('TitemiVmSize')]"
+                    "vmSize": "[variables('serverVmSize')]"
                 },
                 "osProfile": {
-                    "computerName": "[parameters('TitemiName')]",
-                    "adminUsername": "[parameters('TitemiAdminUsername')]",
-                    "adminPassword": "[parameters('TitemiAdminPassword')]"
+                    "computerName": "[parameters('serverName')]",
+                    "adminUsername": "[parameters('serverAdminUsername')]",
+                    "adminPassword": "[parameters('serverAdminPassword')]"
                 },
                 "storageProfile": {
                     "imageReference": {
-                        "publisher": "[variables('TitemiImagePublisher')]",
-                        "offer": "[variables('TitemiImageOffer')]",
-                        "sku": "[parameters('TitemiUbuntuOSVersion')]",
+                        "publisher": "[variables('serverImagePublisher')]",
+                        "offer": "[variables('serverImageOffer')]",
+                        "sku": "[parameters('serverUbuntuOSVersion')]",
                         "version": "latest"
                     },
                     "osDisk": {
-                        "name": "TitemiOSDisk",
+                        "name": "serverOSDisk",
                         "vhd": {
-                            "uri": "[concat('http://', variables('MercyName'), '.blob.core.windows.net/', variables('TitemiStorageAccountContainerName'), '/', variables('TitemiOSDiskName'), '.vhd')]"
+                            "uri": "[concat('http://', variables('Webserver1Name'), '.blob.core.windows.net/', variables('serverStorageAccountContainerName'), '/', variables('serverOSDiskName'), '.vhd')]"
                         },
                         "caching": "ReadWrite",
                         "createOption": "FromImage"
@@ -100,51 +100,51 @@
                 "networkProfile": {
                     "networkInterfaces": [
                         {
-                            "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('TitemiNicName'))]"
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('serverNicName'))]"
                         }
                     ]
                 }
             }
         },
         {
-            "name": "[variables('MercyName')]",
+            "name": "[variables('Webserver1Name')]",
             "type": "Microsoft.Storage/storageAccounts",
             "location": "[resourceGroup().location]",
             "apiVersion": "2015-06-15",
             "dependsOn": [],
             "tags": {
-                "displayName": "Mercy"
+                "displayName": "Webserver1"
             },
             "properties": {
-                "accountType": "[parameters('MercyType')]"
+                "accountType": "[parameters('Webserver1Type')]"
             }
         },
         {
-            "name": "Faith",
+            "name": "netfire",
             "type": "Microsoft.Network/virtualNetworks",
             "location": "[resourceGroup().location]",
             "apiVersion": "2015-06-15",
             "dependsOn": [],
             "tags": {
-                "displayName": "Faith"
+                "displayName": "netfire"
             },
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
-                        "[variables('FaithPrefix')]"
+                        "[variables('netfirePrefix')]"
                     ]
                 },
                 "subnets": [
                     {
-                        "name": "[variables('FaithSubnet1Name')]",
+                        "name": "[variables('netfireSubnet1Name')]",
                         "properties": {
-                            "addressPrefix": "[variables('FaithSubnet1Prefix')]"
+                            "addressPrefix": "[variables('netfireSubnet1Prefix')]"
                         }
                     },
                     {
-                        "name": "[variables('FaithSubnet2Name')]",
+                        "name": "[variables('netfireSubnet2Name')]",
                         "properties": {
-                            "addressPrefix": "[variables('FaithSubnet2Prefix')]"
+                            "addressPrefix": "[variables('netfireSubnet2Prefix')]"
                         }
                     }
                 ]
@@ -152,19 +152,19 @@
         }
     ],
     "variables": {
-        "TitemiImagePublisher": "Canonical",
-        "TitemiImageOffer": "UbuntuServer",
-        "TitemiOSDiskName": "TitemiOSDisk",
-        "TitemiVmSize": "Standard_B1s",
-        "TitemiVnetID": "[resourceId('Microsoft.Network/virtualNetworks', 'Faith')]",
-        "TitemiSubnetRef": "[concat(variables('TitemiVnetID'), '/subnets/', variables('FaithSubnet1Name'))]",
-        "TitemiStorageAccountContainerName": "vhds",
-        "TitemiNicName": "[concat(parameters('TitemiName'), 'NetworkInterface')]",
-        "MercyName": "[concat('Mercy', uniqueString(resourceGroup().id))]",
-        "FaithPrefix": "10.0.0.0/16",
-        "FaithSubnet1Name": "Subnet-1",
-        "FaithSubnet1Prefix": "10.0.0.0/24",
-        "FaithSubnet2Name": "Subnet-2",
-        "FaithSubnet2Prefix": "10.0.1.0/24"
+        "serverImagePublisher": "Canonical",
+        "serverImageOffer": "UbuntuServer",
+        "serverOSDiskName": "serverOSDisk",
+        "serverVmSize": "Standard_B1s",
+        "serverVnetID": "[resourceId('Microsoft.Network/virtualNetworks', 'netfire')]",
+        "serverSubnetRef": "[concat(variables('serverVnetID'), '/subnets/', variables('netfireSubnet1Name'))]",
+        "serverStorageAccountContainerName": "vhds",
+        "serverNicName": "[concat(parameters('serverName'), 'NetworkInterface')]",
+        "Webserver1Name": "[concat('Webserver1', uniqueString(resourceGroup().id))]",
+        "netfirePrefix": "10.0.0.0/16",
+        "netfireSubnet1Name": "Subnet-1",
+        "netfireSubnet1Prefix": "10.0.0.0/24",
+        "netfireSubnet2Name": "Subnet-2",
+        "netfireSubnet2Prefix": "10.0.1.0/24"
     }
 }
