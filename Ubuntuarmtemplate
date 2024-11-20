@@ -17,7 +17,7 @@
             "type": "string",
              "defaultValue": "24.04-LTS",
             "allowedValues": [
-                "24.04-LTS",
+                "24.04-LTS"
             ]
         },
         "Webserver1Type": {
