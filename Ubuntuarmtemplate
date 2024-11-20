@@ -155,7 +155,7 @@
         "TitemiImagePublisher": "Canonical",
         "TitemiImageOffer": "UbuntuServer",
         "TitemiOSDiskName": "TitemiOSDisk",
-        "TitemiVmSize": "Standard_D1",
+        "TitemiVmSize": "Standard_NC8ads_A10_v4",
         "TitemiVnetID": "[resourceId('Microsoft.Network/virtualNetworks', 'Faith')]",
         "TitemiSubnetRef": "[concat(variables('TitemiVnetID'), '/subnets/', variables('FaithSubnet1Name'))]",
         "TitemiStorageAccountContainerName": "vhds",
