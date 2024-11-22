@@ -1,0 +1,275 @@
+{
+  "source": 2,
+  "revision": 15,
+  "description": null,
+  "createdBy": {
+    "displayName": "oluwarotimi yinka",
+    "url": "https://spsprodneu1.vssps.visualstudio.com/A21f22bdb-5f2c-449c-9b9b-d97d606df092/_apis/Identities/6e1138a9-305f-658f-8a7e-6c537f5cca1a",
+    "_links": {
+      "avatar": {
+        "href": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
+      }
+    },
+    "id": "6e1138a9-305f-658f-8a7e-6c537f5cca1a",
+    "uniqueName": "oluwarotimiyinka@gmail.com",
+    "imageUrl": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh",
+    "descriptor": "msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
+  },
+  "createdOn": "2024-11-20T18:31:55.467Z",
+  "modifiedBy": {
+    "displayName": "oluwarotimi yinka",
+    "url": "https://spsprodneu1.vssps.visualstudio.com/A21f22bdb-5f2c-449c-9b9b-d97d606df092/_apis/Identities/6e1138a9-305f-658f-8a7e-6c537f5cca1a",
+    "_links": {
+      "avatar": {
+        "href": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
+      }
+    },
+    "id": "6e1138a9-305f-658f-8a7e-6c537f5cca1a",
+    "uniqueName": "oluwarotimiyinka@gmail.com",
+    "imageUrl": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh",
+    "descriptor": "msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
+  },
+  "modifiedOn": "2024-11-21T15:35:52.380Z",
+  "isDeleted": false,
+  "isDisabled": false,
+  "lastRelease": {
+    "id": 40,
+    "name": "Release-17",
+    "artifacts": [],
+    "_links": {},
+    "description": "",
+    "releaseDefinition": { "id": 3, "projectReference": null, "_links": {} },
+    "createdOn": "2024-11-21T15:35:55.703Z",
+    "createdBy": {
+      "displayName": "oluwarotimi yinka",
+      "url": "https://spsprodneu1.vssps.visualstudio.com/A21f22bdb-5f2c-449c-9b9b-d97d606df092/_apis/Identities/6e1138a9-305f-658f-8a7e-6c537f5cca1a",
+      "_links": {
+        "avatar": {
+          "href": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
+        }
+      },
+      "id": "6e1138a9-305f-658f-8a7e-6c537f5cca1a",
+      "uniqueName": "oluwarotimiyinka@gmail.com",
+      "imageUrl": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh",
+      "descriptor": "msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
+    }
+  },
+  "variables": {},
+  "variableGroups": [],
+  "environments": [
+    {
+      "id": 6,
+      "name": "Stage 1",
+      "rank": 1,
+      "owner": {
+        "displayName": "oluwarotimi yinka",
+        "url": "https://spsprodneu1.vssps.visualstudio.com/A21f22bdb-5f2c-449c-9b9b-d97d606df092/_apis/Identities/6e1138a9-305f-658f-8a7e-6c537f5cca1a",
+        "_links": {
+          "avatar": {
+            "href": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
+          }
+        },
+        "id": "6e1138a9-305f-658f-8a7e-6c537f5cca1a",
+        "uniqueName": "oluwarotimiyinka@gmail.com",
+        "imageUrl": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh",
+        "descriptor": "msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
+      },
+      "variables": {},
+      "variableGroups": [],
+      "preDeployApprovals": {
+        "approvals": [
+          {
+            "rank": 1,
+            "isAutomated": true,
+            "isNotificationOn": false,
+            "id": 18
+          }
+        ],
+        "approvalOptions": {
+          "requiredApproverCount": null,
+          "releaseCreatorCanBeApprover": false,
+          "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+          "enforceIdentityRevalidation": false,
+          "timeoutInMinutes": 0,
+          "executionOrder": 1
+        }
+      },
+      "deployStep": { "id": 19 },
+      "postDeployApprovals": {
+        "approvals": [
+          {
+            "rank": 1,
+            "isAutomated": true,
+            "isNotificationOn": false,
+            "id": 20
+          }
+        ],
+        "approvalOptions": {
+          "requiredApproverCount": null,
+          "releaseCreatorCanBeApprover": false,
+          "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+          "enforceIdentityRevalidation": false,
+          "timeoutInMinutes": 0,
+          "executionOrder": 2
+        }
+      },
+      "deployPhases": [
+        {
+          "deploymentInput": {
+            "parallelExecution": { "parallelExecutionType": 0 },
+            "agentSpecification": { "identifier": "ubuntu latest" },
+            "skipArtifactsDownload": false,
+            "artifactsDownloadInput": { "downloadInputs": [] },
+            "queueId": 75,
+            "demands": [],
+            "enableAccessToken": false,
+            "timeoutInMinutes": 0,
+            "jobCancelTimeoutInMinutes": 1,
+            "condition": "succeeded()",
+            "overrideInputs": {}
+          },
+          "rank": 1,
+          "phaseType": 1,
+          "name": "Agent job",
+          "refName": null,
+          "workflowTasks": [
+            {
+              "environment": {},
+              "taskId": "94a74903-f93f-4075-884f-dc11f34058b4",
+              "version": "3.*",
+              "name": "ARM Template deployment: Resource Group scope",
+              "refName": "",
+              "enabled": true,
+              "alwaysRun": false,
+              "continueOnError": false,
+              "timeoutInMinutes": 0,
+              "retryCountOnTaskFailure": 0,
+              "definitionType": "task",
+              "overrideInputs": {},
+              "condition": "succeeded()",
+              "inputs": {
+                "deploymentScope": "Resource Group",
+                "ConnectedServiceName": "330cea24-824b-4249-b277-04fc79574736",
+                "subscriptionName": "9f6fdc24-c117-4b85-a793-4e11d73abc63",
+                "action": "Create Or Update Resource Group",
+                "resourceGroupName": "NetworkWatcherRG",
+                "location": "Central US",
+                "templateLocation": "Linked artifact",
+                "csmFileLink": "",
+                "csmParametersFileLink": "",
+                "csmFile": "$(System.DefaultWorkingDirectory)/_Release_Pipeline/Vmubuntu",
+                "csmParametersFile": "",
+                "overrideParameters": "-TitemiName Ubuntu -TitemiAdminUserName Titemi -TitemiAdminPassword Titemi123 -TitemiUbuntuOSVersion 22_04-daily-lts -MercyType \"Standard_LRS\"",
+                "deploymentMode": "Complete",
+                "deploymentName": "",
+                "deploymentOutputs": "",
+                "addSpnToEnvironment": "false",
+                "useWithoutJSON": "false"
+              }
+            }
+          ]
+        }
+      ],
+      "environmentOptions": {
+        "emailNotificationType": "OnlyOnFailure",
+        "emailRecipients": "release.environment.owner;release.creator",
+        "skipArtifactsDownload": false,
+        "timeoutInMinutes": 0,
+        "enableAccessToken": false,
+        "publishDeploymentStatus": true,
+        "badgeEnabled": false,
+        "autoLinkWorkItems": false,
+        "pullRequestDeploymentEnabled": false
+      },
+      "demands": [],
+      "conditions": [
+        {
+          "name": "ReleaseStarted",
+          "conditionType": 1,
+          "value": "",
+          "result": null
+        }
+      ],
+      "executionPolicy": { "concurrencyCount": 1, "queueDepthCount": 0 },
+      "schedules": [],
+      "currentRelease": {
+        "id": 40,
+        "url": "https://vsrm.dev.azure.com/oluwarotimiyinka/411ae70b-b0dc-4342-a4f1-5759e86aa49e/_apis/Release/releases/40",
+        "_links": {}
+      },
+      "retentionPolicy": {
+        "daysToKeep": 30,
+        "releasesToKeep": 3,
+        "retainBuild": true
+      },
+      "processParameters": {},
+      "properties": {
+        "BoardsEnvironmentType": {
+          "$type": "System.String",
+          "$value": "unmapped"
+        },
+        "LinkBoardsWorkItems": { "$type": "System.String", "$value": "False" }
+      },
+      "preDeploymentGates": { "id": 0, "gatesOptions": null, "gates": [] },
+      "postDeploymentGates": { "id": 0, "gatesOptions": null, "gates": [] },
+      "environmentTriggers": [],
+      "badgeUrl": "https://vsrm.dev.azure.com/oluwarotimiyinka/_apis/public/Release/badge/411ae70b-b0dc-4342-a4f1-5759e86aa49e/3/6"
+    }
+  ],
+  "artifacts": [
+    {
+      "sourceId": "411ae70b-b0dc-4342-a4f1-5759e86aa49e:89e0ef2e-b677-409a-b2a9-3184a03ecbde",
+      "type": "Git",
+      "alias": "_Release_Pipeline",
+      "definitionReference": {
+        "branches": { "id": "main", "name": "main" },
+        "checkoutNestedSubmodules": {
+          "id": "True",
+          "name": "Any nested submodules within"
+        },
+        "checkoutSubmodules": { "id": "", "name": "" },
+        "defaultVersionSpecific": { "id": "", "name": "" },
+        "defaultVersionType": {
+          "id": "latestFromBranchType",
+          "name": "Latest from the default branch"
+        },
+        "definition": {
+          "id": "89e0ef2e-b677-409a-b2a9-3184a03ecbde",
+          "name": "Release_Pipeline"
+        },
+        "fetchDepth": { "id": "", "name": "" },
+        "gitLfsSupport": { "id": "", "name": "" },
+        "project": {
+          "id": "411ae70b-b0dc-4342-a4f1-5759e86aa49e",
+          "name": "Release_Pipeline"
+        }
+      },
+      "isPrimary": true,
+      "isRetained": false
+    }
+  ],
+  "triggers": [],
+  "releaseNameFormat": "Release-$(rev:r)",
+  "tags": [],
+  "properties": {
+    "DefinitionCreationSource": {
+      "$type": "System.String",
+      "$value": "ReleaseNew"
+    },
+    "IntegrateBoardsWorkItems": { "$type": "System.String", "$value": "False" },
+    "IntegrateJiraWorkItems": { "$type": "System.String", "$value": "false" }
+  },
+  "id": 3,
+  "name": "New release pipeline (1)",
+  "path": "\\",
+  "projectReference": null,
+  "url": "https://vsrm.dev.azure.com/oluwarotimiyinka/411ae70b-b0dc-4342-a4f1-5759e86aa49e/_apis/Release/definitions/3",
+  "_links": {
+    "self": {
+      "href": "https://vsrm.dev.azure.com/oluwarotimiyinka/411ae70b-b0dc-4342-a4f1-5759e86aa49e/_apis/Release/definitions/3"
+    },
+    "web": {
+      "href": "https://dev.azure.com/oluwarotimiyinka/411ae70b-b0dc-4342-a4f1-5759e86aa49e/_release?definitionId=3"
+    }
+  }
+}
