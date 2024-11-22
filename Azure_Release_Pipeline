@@ -23,7 +23,7 @@
         "href": "https://dev.azure.com/"Org name"/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
       }
     },
-    "id": "6e1138a9-305f-658f-8a7e-6c537f5cca1a",
+    "id": "id",
     "uniqueName": ""AzureDevOps_org_name"@gmail.com",
     "imageUrl": "https://dev.azure.com/Org name/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh",
     "descriptor": "msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
@@ -47,7 +47,7 @@
           "href": "https://dev.azure.com/"AzureDevOps_org_name"/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
         }
       },
-      "id": "6e1138a9-305f-658f-8a7e-6c537f5cca1a",
+      "id": "id",
       "uniqueName": "User Email",
       "imageUrl": "https://dev.azure.com/"Org name"/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh",
       "descriptor": "msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
@@ -68,7 +68,7 @@
             "href": "https://dev.azure.com/"AzureDevOps_org_name"/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
           }
         },
-        "id": "6e1138a9-305f-658f-8a7e-6c537f5cca1a",
+        "id": "id",
         "uniqueName": ""AzureDevOps_org_name"@gmail.com",
         "imageUrl": "https://dev.azure.com/"AzureDevOps_org_name"/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh",
         "descriptor": "msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
@@ -217,7 +217,7 @@
   ],
   "artifacts": [
     {
-      "sourceId": "411ae70b-b0dc-4342-a4f1-5759e86aa49e:89e0ef2e-b677-409a-b2a9-3184a03ecbde",
+      "sourceId": "sourceid",
       "type": "Git",
       "alias": "_Release_Pipeline",
       "definitionReference": {
