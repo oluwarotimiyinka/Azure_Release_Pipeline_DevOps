@@ -149,7 +149,7 @@
               "inputs": {
                 "deploymentScope": "Resource Group",
                 "ConnectedServiceName": "330cea24-824b-4249-b277-04fc79574736",
-                "subscriptionName": "9f6fdc24-c117-4b85-a793-4e11d73abc63",
+                "subscriptionName": "SubscriptionName",
                 "action": "Create Or Update Resource Group",
                 "resourceGroupName": "NetworkWatcherRG",
                 "location": "Central US",
