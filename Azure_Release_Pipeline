@@ -3,30 +3,29 @@
   "revision": 15,
   "description": null,
   "createdBy": {
-    "displayName": "oluwarotimi yinka",
+    "displayName": ""User_Name"",
     "url": "https://spsprodneu1.vssps.visualstudio.com/A21f22bdb-5f2c-449c-9b9b-d97d606df092/_apis/Identities/6e1138a9-305f-658f-8a7e-6c537f5cca1a",
     "_links": {
       "avatar": {
-        "href": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
-      }
+        "href": "AzureDevOps Url"    }
     },
     "id": "6e1138a9-305f-658f-8a7e-6c537f5cca1a",
-    "uniqueName": "oluwarotimiyinka@gmail.com",
-    "imageUrl": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh",
+    "uniqueName": "DevOps User Email",
+    "imageUrl": "Script Url from Azure",
     "descriptor": "msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
   },
   "createdOn": "2024-11-20T18:31:55.467Z",
   "modifiedBy": {
-    "displayName": "oluwarotimi yinka",
+    "displayName": ""User_Name"",
     "url": "https://spsprodneu1.vssps.visualstudio.com/A21f22bdb-5f2c-449c-9b9b-d97d606df092/_apis/Identities/6e1138a9-305f-658f-8a7e-6c537f5cca1a",
     "_links": {
       "avatar": {
-        "href": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
+        "href": "https://dev.azure.com/"Org name"/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
       }
     },
     "id": "6e1138a9-305f-658f-8a7e-6c537f5cca1a",
-    "uniqueName": "oluwarotimiyinka@gmail.com",
-    "imageUrl": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh",
+    "uniqueName": ""AzureDevOps_org_name"@gmail.com",
+    "imageUrl": "https://dev.azure.com/Org name/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh",
     "descriptor": "msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
   },
   "modifiedOn": "2024-11-21T15:35:52.380Z",
@@ -41,16 +40,16 @@
     "releaseDefinition": { "id": 3, "projectReference": null, "_links": {} },
     "createdOn": "2024-11-21T15:35:55.703Z",
     "createdBy": {
-      "displayName": "oluwarotimi yinka",
+      "displayName": ""User_Name"",
       "url": "https://spsprodneu1.vssps.visualstudio.com/A21f22bdb-5f2c-449c-9b9b-d97d606df092/_apis/Identities/6e1138a9-305f-658f-8a7e-6c537f5cca1a",
       "_links": {
         "avatar": {
-          "href": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
+          "href": "https://dev.azure.com/"AzureDevOps_org_name"/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
         }
       },
       "id": "6e1138a9-305f-658f-8a7e-6c537f5cca1a",
-      "uniqueName": "oluwarotimiyinka@gmail.com",
-      "imageUrl": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh",
+      "uniqueName": "User Email",
+      "imageUrl": "https://dev.azure.com/"Org name"/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh",
       "descriptor": "msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
     }
   },
@@ -62,16 +61,16 @@
       "name": "Stage 1",
       "rank": 1,
       "owner": {
-        "displayName": "oluwarotimi yinka",
+        "displayName": ""User_Name"",
         "url": "https://spsprodneu1.vssps.visualstudio.com/A21f22bdb-5f2c-449c-9b9b-d97d606df092/_apis/Identities/6e1138a9-305f-658f-8a7e-6c537f5cca1a",
         "_links": {
           "avatar": {
-            "href": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
+            "href": "https://dev.azure.com/"AzureDevOps_org_name"/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
           }
         },
         "id": "6e1138a9-305f-658f-8a7e-6c537f5cca1a",
-        "uniqueName": "oluwarotimiyinka@gmail.com",
-        "imageUrl": "https://dev.azure.com/oluwarotimiyinka/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh",
+        "uniqueName": ""AzureDevOps_org_name"@gmail.com",
+        "imageUrl": "https://dev.azure.com/"AzureDevOps_org_name"/_apis/GraphProfile/MemberAvatars/msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh",
         "descriptor": "msa.NmUxMTM4YTktMzA1Zi03NThmLThhN2UtNmM1MzdmNWNjYTFh"
       },
       "variables": {},
@@ -194,7 +193,7 @@
       "schedules": [],
       "currentRelease": {
         "id": 40,
-        "url": "https://vsrm.dev.azure.com/oluwarotimiyinka/411ae70b-b0dc-4342-a4f1-5759e86aa49e/_apis/Release/releases/40",
+        "url": "https://vsrm.dev.azure.com/"AzureDevOps_org_name"/411ae70b-b0dc-4342-a4f1-5759e86aa49e/_apis/Release/releases/40",
         "_links": {}
       },
       "retentionPolicy": {
@@ -213,7 +212,7 @@
       "preDeploymentGates": { "id": 0, "gatesOptions": null, "gates": [] },
       "postDeploymentGates": { "id": 0, "gatesOptions": null, "gates": [] },
       "environmentTriggers": [],
-      "badgeUrl": "https://vsrm.dev.azure.com/oluwarotimiyinka/_apis/public/Release/badge/411ae70b-b0dc-4342-a4f1-5759e86aa49e/3/6"
+      "badgeUrl": "https://vsrm.dev.azure.com/"AzureDevOps_org_name"/_apis/public/Release/badge/411ae70b-b0dc-4342-a4f1-5759e86aa49e/3/6"
     }
   ],
   "artifacts": [
@@ -263,13 +262,13 @@
   "name": "New release pipeline (1)",
   "path": "\\",
   "projectReference": null,
-  "url": "https://vsrm.dev.azure.com/oluwarotimiyinka/411ae70b-b0dc-4342-a4f1-5759e86aa49e/_apis/Release/definitions/3",
+  "url": "https://vsrm.dev.azure.com/"AzureDevOps_org_name"/411ae70b-b0dc-4342-a4f1-5759e86aa49e/_apis/Release/definitions/3",
   "_links": {
     "self": {
-      "href": "https://vsrm.dev.azure.com/oluwarotimiyinka/411ae70b-b0dc-4342-a4f1-5759e86aa49e/_apis/Release/definitions/3"
+      "href": "https://vsrm.dev.azure.com/"AzureDevOps_org_name"/411ae70b-b0dc-4342-a4f1-5759e86aa49e/_apis/Release/definitions/3"
     },
     "web": {
-      "href": "https://dev.azure.com/oluwarotimiyinka/411ae70b-b0dc-4342-a4f1-5759e86aa49e/_release?definitionId=3"
+      "href": "https://dev.azure.com/"AzureDevOps_org_name"/411ae70b-b0dc-4342-a4f1-5759e86aa49e/_release?definitionId=3"
     }
   }
 }
