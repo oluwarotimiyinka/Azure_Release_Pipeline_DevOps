@@ -1,9 +1,7 @@
 # Azure Release Pipeline to Deploy Linux VM with ARM template.
 
-<p>
-    <img src="[https://picsum.photos/100/100](https://github.com/user-attachments/assets/14fbe7e9-7fa5-4f88-9d3a-9cb451d2687a)" >
-    <img src="[https://picsum.photos/100/100](https://github.com/user-attachments/assets/41866178-06da-4c8a-aa42-7f694f668327)" >
-</p>
+![ubuntu-logo1](https://github.com/user-attachments/assets/14fbe7e9-7fa5-4f88-9d3a-9cb451d2687a)
+![images](https://github.com/user-attachments/assets/41866178-06da-4c8a-aa42-7f694f668327)
 
 ## Introduction 
 TODO: To deploy Linux virtual machine to azure using ARM Template and Azure DevOps Release Pipeline. 
@@ -14,8 +12,6 @@ TOOLS:
 2.	Azure DevOps
 3.	GitHub
    
-![ubuntu-logo1](https://github.com/user-attachments/assets/14fbe7e9-7fa5-4f88-9d3a-9cb451d2687a)
-![images](https://github.com/user-attachments/assets/41866178-06da-4c8a-aa42-7f694f668327)
 
 ## Build and Test
 TODO: 
