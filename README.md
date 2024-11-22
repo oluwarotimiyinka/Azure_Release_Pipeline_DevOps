@@ -19,12 +19,9 @@ Checked Azure Quota to be sure the selected Sku will fly
 Initiate a repository on Azure DevOps with README file
 Created a new file by copying and pasting the content of the ARM template on Azure Portal.
 Authenticate to Azure portal from Azure DevOps if not done before
-Created Release pipeline to deploy the ARM template using classic pipeline [a relative link](/Azure_Release_Pipeline)
+Created Release pipeline to deploy the ARM template using classic pipeline [yaml script](/Azure_Release_Pipeline)
+Set up Stage in Release Pipeline by authenticating to Azure subscription and supplying needed parameters from the ARM template file.
+Save the stage and deploy
 
-## Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## Challenge
+Getting the right Sku and VM size with a low cost, available in the targeted region and withing the subscription Quota
