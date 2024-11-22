@@ -26,5 +26,5 @@ Created Release pipeline to deploy the ARM template using classic pipeline [yaml
 Set up Stage in Release Pipeline by authenticating to Azure subscription and supplying needed parameters from the ARM template file.
 Save the stage and deploy
 
-## Challenge
+### Challenge
 Getting the right Sku and VM size with a low cost, available in the targeted region and withing the subscription Quota
